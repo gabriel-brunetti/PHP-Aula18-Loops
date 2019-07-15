@@ -75,9 +75,37 @@
 
                         // FORMA IF TERNÁRIO sem atribuição
                         // $result == 1 ? $contagem++ : $contagem=0;
+                        //para fazer o git commit --amend
                     }
                     echo("Lançou a moeda $n_arremessos vezes até conseguir 5 caras");
                 ?>
+            </div>
+        </li>
+
+        <li>
+            <p> Utilizando um do/while, realizar um programa que lance a moeda até tirar cara (o número 1).
+            No final do programa, imprimir quantos lançamentos da moeda forem necessários.</p>
+            <div>
+                    <?php
+                        // SOLUÇÃO SÉRGIO
+                        // $n_arremessos = 0;
+                        // do {
+                        //     $result = mt_rand(0,1);
+                        //     $n_arremessos++;
+                        // } while ($result != 1);
+                        // echo('Deu cara depois de ' . $n_arremessos . ' arremessos');
+
+                        // SOLUÇÃO AUTORAL
+                        $resultadoCara = 0;
+                        $quantidadeLancamento = 0;
+                        do {
+                            $lancamento = mt_rand(0,1);
+                            echo $lancamento . " ";
+                            $quantidadeLancamento++;
+                            $resultadoCara = ($lancamento == 1 ? $resultadoCara + 1: 0);
+                        } while ($resultadoCara != 1); // enquanto for diferente de 1 vai continuar fazendo !
+                        echo("Lançou a moeda $quantidadeLancamento vezes até conseguir tirar cara");
+                    ?>
             </div>
         </li>
     </ol>
