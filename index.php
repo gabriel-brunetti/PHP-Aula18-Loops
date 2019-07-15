@@ -63,11 +63,18 @@
                         $result = mt_rand(0,1);
                         $n_arremessos++;
 
-                        if($result == 1){
-                            $contagem++;
-                        } else {
-                            $contagem = 0;
-                        }
+                        // FORMA IF NORMAL
+                        // if($result == 1){
+                        //     $contagem++;
+                        // } else {
+                        //     $contagem = 0;
+                        // }
+
+                        // FORMA IF TERNÁRIO com atribuição
+                        $contagem = ($result == 1 ? $contagem + 1 : 0); //posso atribuir o resukltado do if ternário a una variável!
+
+                        // FORMA IF TERNÁRIO sem atribuição
+                        // $result == 1 ? $contagem++ : $contagem=0;
                     }
                     echo("Lançou a moeda $n_arremessos vezes até conseguir 5 caras");
                 ?>
