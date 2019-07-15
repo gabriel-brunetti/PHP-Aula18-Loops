@@ -108,6 +108,93 @@
                     ?>
             </div>
         </li>
+
+        <li>
+            <p>Definir um array com 5 strings que sejam nomes. Percorrer esse array para
+            imprimir todos os nomes na tela.<br>
+            a. Resolver este problema com um for.<br>
+            b. Resolver este problema com while.<br>
+            c. Resolver este problema com um do/while.<br>
+            </p>
+            <div>
+                <?php
+                    $nomes = [
+                        'Sérgio',
+                        'Thomaz',
+                        'Fernando Finado',
+                        'Ana Livia',
+                        'Marcuso'
+                    ];
+                    echo "Metodo For".'<br>'.'<br>';
+
+                    for($i = 0; $i < count($nomes) ; $i++){
+                        echo($nomes[$i].'<br>');
+                    }
+                    echo '<br>'."Metodo While".'<br>'.'<br>';
+
+                    $i = 0;
+                    while ($i < count($nomes)){
+                        echo($nomes[$i].'<br>');
+                        $i++;
+                    }
+
+                    echo '<br>'."Imprimindo ao Contrário".'<br>'.'<br>';
+                    $i = count($nomes) -1;
+                    do {
+                        echo($nomes[$i].'<br>');
+                        $i--;
+                    } while ($i >= 0);
+                ?>
+            </div>
+        </li>
+
+        <li>
+            <p>Definir um array com 10 números aleatórios entre 0 e 10. Percorrer esse array
+            para imprimir todos os números. A execução deve terminar se algum dos
+            números encontrados for 5 (a mensagem impressa deve ser “Encontramos um
+            5!”).
+            a. Resolver este problema com um for.
+            b. Resolver este problema com um while.
+            c. Resolver este problema com um do/while.</p>
+
+            <div>
+                <?php
+                    $numeros = [];
+                    echo 'Método For'.'<br>';
+                    for($i = 0; $i < 10; $i++){
+                        $var = mt_rand(0,10);
+                        $numeros[] = $var;
+                        if ($var == 5){
+                            echo 'Encontramos um 5!';
+                            print_r($numeros);
+                            break;
+                        }
+                    }
+                    $numeros = [];
+                    echo '<br>'.'Método While'.'<br>';
+                    while(count($numeros)<=10){
+                        $var = mt_rand(0,10);
+                        $numeros[] = $var;
+                        if ($var == 5){
+                            echo 'Encontramos um 5!';
+                            print_r($numeros);
+                            break;
+                        }
+                    }
+                    $numeros = [];
+                    echo '<br>'.'Método Do/While'.'<br>';
+                    do {
+                        $var = mt_rand(0,10);
+                        $numeros[] = $var;
+                        if ($var == 5){
+                            echo 'Encontramos um 5!';
+                            print_r($numeros);
+                            break;
+                        }
+                    } while (count($numeros)<=10)
+                ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
