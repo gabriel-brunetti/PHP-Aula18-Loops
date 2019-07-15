@@ -20,8 +20,7 @@
             </div>
         </li>
         <li>
-            <p>Modificar o exercício anterior para que, em vez de parar no número 100, pare
-em um número gerado aleatoriamente entre 0 e 100</p>
+            <p>Modificar o exercício anterior para que, em vez de parar no número 100, pare em um número gerado aleatoriamente entre 0 e 100</p>
             <div>
                 <?php
                     for ($i=0; $i <= mt_rand(0,100) ; $i++) 
@@ -30,6 +29,28 @@ em um número gerado aleatoriamente entre 0 e 100</p>
                     }
                 ?>
             </div>
+        </li>
+        <li>
+            <p> Mostrar a tabela de multiplicação do 2 utilizando um for</p>
+            <div>
+                    <table>
+                        <?php
+                            for ($i= 1; $i <= 10 ; $i++) {
+                                echo('<tr>');
+                                echo('<td>'); 
+                                echo (2 . ' x ' . $i . ' = ' . (2*$i) );
+                                echo('  </td>');
+                                echo('<tr>');
+                            }
+                        ?>
+                    </table>
+            </div>
+        </li>
+        <li>
+            <p>Utilizando um while, fazer um programa que lance uma moeda (escolhendo um número aleatório que pode ser 0 ou 1)
+            até tirar 5 vezes cara (o número 1).Ao terminar, imprimir o número de lançamentos da moeda até tirar 5 vezes cara.
+            </p>
+            
         </li>
     </ol>
 </body>
