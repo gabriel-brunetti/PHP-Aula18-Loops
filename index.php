@@ -160,7 +160,7 @@
             <div>
                 <?php
                     $numeros = [];
-                    echo 'Método For'.'<br>';
+                    echo 'a) Método For'.'<br>';
                     for($i = 0; $i < 10; $i++){
                         $var = mt_rand(0,10);
                         $numeros[] = $var;
@@ -171,7 +171,7 @@
                         }
                     }
                     $numeros = [];
-                    echo '<br>'.'Método While'.'<br>';
+                    echo '<br>'.'b) Método While'.'<br>';
                     while(count($numeros)<=10){
                         $var = mt_rand(0,10);
                         $numeros[] = $var;
@@ -182,7 +182,7 @@
                         }
                     }
                     $numeros = [];
-                    echo '<br>'.'Método Do/While'.'<br>';
+                    echo '<br>'.'c) Método Do/While'.'<br>';
                     do {
                         $var = mt_rand(0,10);
                         $numeros[] = $var;
@@ -194,6 +194,61 @@
                     } while (count($numeros)<=10)
                 ?>
             </div>
+        </li>
+
+        <li>
+            <p>Utilizando a função “Range”(http://php.net/manual/en/function.range.php),
+            criar um intervalo de letras (de a até o), imprimir um valor que diga “Na posição<br>
+            [index], está o valor [value]”, em que [value] será substituído por cada valor do<br>
+            array e [index] representa o índice.<br>
+            </p>
+
+            <pre>
+                <?php
+                    $letras = range('a','o');
+                    print_r($letras);
+                ?>
+            </pre>
+            <div>
+                <?php
+                    foreach ($letras as $posicao => $letra) {
+                        echo "Na posição $posicao, está o valor $letra<br>";
+                    }
+                ?>
+            </div>
+        </li>
+
+        <li>
+            <p>Definir uma variável $mascote que seja um array associativo</p>
+            <div>
+                <?php 
+                    $mascote = [
+                        'animal' => 'Cachorro',
+                        'idade' => 5,
+                        'altura' => 0.60,
+                        'nome' => 'Sonic'
+                    ];
+                    echo('<pre>');
+                    print_r($mascote);
+                    echo('</pre>');
+
+                ?>
+            </div>
+        </li>
+
+        <li>
+        <p>Percorrer os valores do array com um foreach que imprima (por exemplo):
+            animal: cachorro
+            idade: 5
+            altura: 0,60
+            nome: Sonic</p>
+        <div>
+        <?php
+            foreach ($mascote as $indice => $valor) {
+                echo "$indice: $valor <br>";
+            }
+        ?>
+        </div>
         </li>
     </ol>
 </body>
