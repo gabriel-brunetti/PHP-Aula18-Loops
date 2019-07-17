@@ -250,6 +250,67 @@
         ?>
         </div>
         </li>
+
+        <li>
+            <p>A partir de um arquivo com a seguinte variável definida:<br>
+                Criar um script que mostre o nome da capital e o país a partir da variável $ceu.
+            </p>
+            <div>
+                <?php
+                    $ceu = array( "Itália"=>"Roma", "Luxemburgo"=>"Luxemburgo",
+                    "Bélgica"=> "Bruxelas", "Dinamarca"=>"Copenhagen",
+                    "Finlândia"=>"Helsinki", "França" => "Paris",
+                    "Eslováquia"=>"Bratislava", "Eslovênia"=>"Liubliana",
+                    "Alemanha" => "Berlim", "Grécia" => "Atenas",
+                    "Irlanda"=>"Dublin", "Holanda"=>"Amsterdã",
+                    "Portugal"=>"Lisboa", "Espanha"=>"Madri",
+                    "Suécia"=>"Estocolmo", "Reino Unido"=>"Londres",
+                    "Chipre"=>"Nicósia", "Lituânia"=>"Vilnius", "República
+                    Tcheca"=>"Praga", "Estônia"=>"Tallinn",
+                    "Hungria"=>"Budapeste", "Letônia"=>"Riga",
+                    "Malta"=>"Valletta", "Áustria" => "Viena",
+                    "Polônia"=>"Varsóvia") ;
+
+                    ksort($ceu, SORT_STRING);
+
+                    foreach ($ceu as $pais => $capital) {
+                        echo "A capital da $pais é $capital <br>";
+                    }
+                ?>
+            </div>
+        </li>
+
+        <li>
+            <p>
+            </p>
+            <div>
+                <?php
+                    $ceu = [
+                        "Argentina" => ["Buenos Aires", "Córdoba", "Santa Fé"],
+                        "Brasil" => ["Brasília", "Rio de Janeiro", "São Paulo"],
+                        "Colômbia" => ["Cartagena", "Bogotá", "Barranquilla"],
+                        "França" => ["Paris", "Nantes", "Lyon"],
+                        "Itália" => ["Roma", "Milão", "Veneza"],
+                        "Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+                        ];
+
+                    echo('<ul>');
+                    foreach ($ceu as $indexPais => $arrayDeCidades) {
+
+                        $oOuA = $indexPais == 'Brasil' ? 'o' : 'a';
+                        echo("<li>As cidades d$oOuA $indexPais são</li>");
+                        echo('<ul>');
+        
+                        foreach ($arrayDeCidades as $cidade) {
+                            echo("<li>$cidade</li>");
+                        }
+
+                        echo('</ul>');
+                    }
+                    echo('</ul>');
+                ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
