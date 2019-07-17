@@ -311,6 +311,35 @@
                 ?>
             </div>
         </li>
+
+        <li>
+            <p>
+            </p>
+            <div>
+            <?php
+                $ceu = [
+                    "Argentina" => [
+                        'cidades' =>["Buenos Aires", "Córdoba", "Santa Fé"],
+                        'naAmerica' => true
+                    ],
+                    "Brasil" => [
+                        'cidades' =>["Brasília", "Rio de Janeiro", "São Paulo"],
+                        'naAmerica' => true
+                    ],
+                    "Colômbia" => [
+                        'cidades' =>["Cartagena", "Bogotá", "Barranquilla"],
+                        'naAmerica' => true
+                    ],
+                    "França" => [
+                        'cidades' =>["Paris", "Nantes", "Lyon"],
+                        'naAmerica' => false
+                    ],
+                    "Itália" => ["Roma", "Milão", "Veneza"],
+                    "Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+                    ];
+            ?>
+            </div>
+        </li>
     </ol>
 </body>
 </html>
