@@ -334,9 +334,29 @@
                         'cidades' =>["Paris", "Nantes", "Lyon"],
                         'naAmerica' => false
                     ],
-                    "Itália" => ["Roma", "Milão", "Veneza"],
-                    "Alemanha" => ["Munique", "Berlim", "Frankfurt"]
+                    "Itália" => [
+                        'cidades' =>["Roma", "Milão", "Veneza"],
+                        'naAmerica' => false
+                    ],
+                    "Alemanha" => [
+                        'cidades' =>["Munique", "Berlim", "Frankfurt"],
+                        'naAmerica' => false
                     ];
+
+                    echo('<ul>');
+                    foreach ($ceu as $indexPais => $arrayDeCidades) {
+
+                        $oOuA = $indexPais == 'Brasil' ? 'o' : 'a';
+                        echo("<li>As cidades d$oOuA $indexPais são</li>");
+                        echo('<ul>');
+        
+                        foreach ($arrayDeCidades as $cidade) {
+                            echo("<li>$cidade</li>");
+                        }
+
+                        echo('</ul>');
+                    }
+                    echo('</ul>');                    
             ?>
             </div>
         </li>
