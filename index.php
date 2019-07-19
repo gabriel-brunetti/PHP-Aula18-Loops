@@ -341,20 +341,23 @@
                     "Alemanha" => [
                         'cidades' =>["Munique", "Berlim", "Frankfurt"],
                         'naAmerica' => false
+                    ]
                     ];
 
                     echo('<ul>');
-                    foreach ($ceu as $indexPais => $arrayDeCidades) {
+                    foreach ($ceu as $indexPais) {
 
-                        $oOuA = $indexPais == 'Brasil' ? 'o' : 'a';
-                        echo("<li>As cidades d$oOuA $indexPais são</li>");
-                        echo('<ul>');
-        
-                        foreach ($arrayDeCidades as $cidade) {
-                            echo("<li>$cidade</li>");
+                        if ($indexPais['naAmerica'] == true) {
+                            $oOuA = $indexPais == 'Brasil' ? 'o' : 'a';
+                            echo("<li>As cidades d$oOuA $indexPais são</li>");
+                            echo('<ul>');
+            
+                            foreach ($indexPais['cidades'] as $cidade) {
+                                echo("<li>$cidade</li>");
+                            }
+    
+                            echo('</ul>');
                         }
-
-                        echo('</ul>');
                     }
                     echo('</ul>');                    
             ?>
